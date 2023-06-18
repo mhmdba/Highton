@@ -35,7 +35,7 @@ If you have defined the 'USERNAME' and 'API_KEY', you can start to retrieve data
 
     from highton.models import Deal
 
-    deals = Deal.list()
+    deals = Deal.list(Q5s)
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ Create data
 
     from highton.models import Deal
 
-    new_deal_object = Deal(name='new deal').create()
+    new_deal_object = Deal(name='new deal').create(Q5S)
 
 ------------------------------------------------------------------------------------------------------------------------
 Update data
@@ -68,7 +68,7 @@ Update data
 
     deal_object = Deal.get(12345)
     deal_object.name = 'new name'
-    deal_object.update()
+    deal_object.update(Q5S)
 
 ------------------------------------------------------------------------------------------------------------------------
 Delete data
@@ -79,5 +79,5 @@ Delete data
     from highton.models import Deal
 
     deal_object = Deal.get(12345)
-    deal_object.delete()
+    deal_object.delete(Q5S)
 
